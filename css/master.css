@@ -1,6 +1,7 @@
 html{
 --Pale-Blue: hsl(243, 100%, 93%);
 --Grayish-Blue: hsl(229, 7%, 55%);
+--Grayish-Blue-extra: hsla(180, 4%, 80%, 0.877);
 --Dark-Blue: hsl(228, 56%, 26%);
 --Very-Dark-Blue: hsl(229, 57%, 11%);
 --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
@@ -44,7 +45,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    gap: 20px;
+    gap: 80px;
     height: 100%;
 
 }
@@ -58,6 +59,7 @@ body{
     border-radius: 5px 60px 5px 5px;
     padding: 25px;
     padding-top: 20px;
+    scale: 1.2;
 }
 .logo img{
     margin-bottom: 15px;
@@ -67,17 +69,18 @@ body{
     display: flex;
 }
 .nav div{
+    margin-top: 5px;
     margin-right: 10px;
     height: 35px;
     width: 35px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: var(--Very-Dark-Blue);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .nav img{
-    width: 20px;
+    width: 17px;
 }
 .right-section{
     width:380px ;
@@ -87,10 +90,11 @@ body{
     background-color: var(--Dark-Blue);
     position: relative;
     border-radius: 5px;
+    scale: 1.2;
 }
 .right-section p:first-child{
-    font-size: 12px;
-    color: var(--Grayish-Blue);
+    font-size: 11px;
+    color: var(--Grayish-Blue-extra);
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 400;
@@ -172,7 +176,7 @@ input[type="range"]::-webkit-slider-thumb{
   font-size: .7rem;
   font-weight: 700;
 }
-@media screen and (max-width:630px) {
+@media screen and (max-width:800px) {
     .contenar{
         flex-direction: column;
         align-items: center;
