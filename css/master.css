@@ -1,0 +1,216 @@
+html{
+--Pale-Blue: hsl(243, 100%, 93%);
+--Grayish-Blue: hsl(229, 7%, 55%);
+--Dark-Blue: hsl(228, 56%, 26%);
+--Very-Dark-Blue: hsl(229, 57%, 11%);
+--Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+Font-size: 14px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Raleway;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+}
+.all{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--Very-Dark-Blue) ;
+}
+.mobile-image{
+    display: none;
+}
+.main-image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 50%;
+}
+.contenar{
+    z-index: 2;
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+
+}
+.left-section{
+    margin-right: px;
+    display: flex;
+    flex-direction: column;
+    width:230px ;
+    height:130px ;
+    background-color: var(--Dark-Blue);
+    border-radius: 5px 60px 5px 5px;
+    padding: 25px;
+    padding-top: 20px;
+}
+.logo img{
+    margin-bottom: 15px;
+    height: 25px;
+}
+.nav{
+    display: flex;
+}
+.nav div{
+    margin-right: 10px;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav img{
+    width: 20px;
+}
+.right-section{
+    width:380px ;
+    height:100px ;
+    padding: 25px;
+    padding-top: 10px;
+    background-color: var(--Dark-Blue);
+    position: relative;
+    border-radius: 5px;
+}
+.right-section p:first-child{
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.right-section p:first-child span{
+     color: var(--Pale-Blue);
+     letter-spacing: -.5px;
+}
+.right-section p:first-child span span{
+    letter-spacing: -2.5px;
+}
+.right-section p:first-child span span:last-child{
+    margin-right: 2px;
+}
+input[type="range"] {
+    overflow: hidden;
+    -webkit-appearance: none;
+     appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid var(--Very-Dark-Blue);
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: .8rem;
+    background: linear-gradient( to right,hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    
+}
+.right-section .cloud{
+    position: absolute;
+    background-color: white;
+    width:fit-content ;
+    padding: 10px;
+    border-radius:10px 10px 0px 10px ;
+    top: -30%;
+    right: 25px;
+}
+.right-section .cloud h2 span{
+    font-size: 1rem;
+    color: var(--Pale-Blue);
+}
+.cloud::after{
+    content: '';
+    position: absolute;
+    border-color: white white transparent transparent;
+    border-width: 13px;
+    border-style: solid;
+    position: absolute;
+    right: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: .12rem;
+    height: .6rem;
+    width: .6rem;
+    border-radius: 50%;
+    background-color: white; 
+    box-shadow: 185px 0 20px 185px var(--Very-Dark-Blue);
+    position: relative;
+}
+.right-section div p:nth-child(1){
+    color: var(--Pale-Blue);
+    font-size: .7rem;
+    font-weight: 700;
+}
+.right-section div{
+ position: relative;
+ top: -10px;
+}
+.right-section div p:nth-child(2){
+   position: absolute;
+   right: 0;
+  top: 0;
+  color: var(--Pale-Blue);
+  font-size: .7rem;
+  font-weight: 700;
+}
+@media screen and (max-width:630px) {
+    .contenar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-image{
+        display: none;
+    }
+    .mobile-image{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100%;
+    }
+   .right-section{
+    width: 230px;
+   } 
+   .right-section p:first-child{
+    text-align: center;
+    font-size: 11px;
+   }
+   .right-section div p:first-child{
+    position: absolute;
+    left: 0;
+    top: 0;
+   }
+   .right-section div p:last-child{
+    top:10px;
+   }
+   .right-section .cloud{
+    position: absolute;
+    top: 75%;
+    right: 25%;
+   border-radius: 10px 10px 10px 10px;
+   }
+   .right-section .cloud::after{
+    display: none;
+   }
+}
